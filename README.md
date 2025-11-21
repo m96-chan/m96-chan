@@ -2,7 +2,7 @@
 
 <img src="https://github-readme-stats.vercel.app/api?username=m96-chan&show_icons=true&locale=ja&theme=chartreuse-dark" alt="GitHub Stats" width="410" /></p>
 
-<img src="https://github-profile-trophy.vercel.app/?username=m96-chan&theme=juicyfresh&no-bg=true" />
+<!-- <img src="https://github-profile-trophy.vercel.app/?username=m96-chan&theme=juicyfresh&no-bg=true" /> -->
 
 ## About Me
 
