@@ -26,9 +26,9 @@ MOTD_ART = os.environ.get("MOTD_ART", str(SCRIPT_DIR.parent / ".motd_art"))
 # Isometric projection parameters
 ISO_X_SCALE = 14.0
 ISO_Y_SCALE = 7.5
-BASE_HEIGHT = 3
-MAX_EXTRA = 5
-SCALE_FACTOR = 0.3
+BASE_HEIGHT = 5
+MAX_EXTRA = 8
+SCALE_FACTOR = 0.5
 
 # SVG canvas
 SVG_WIDTH = 880
@@ -43,14 +43,6 @@ COLORS = {
     2: {"top": "#006d32", "front": "#005828", "right": "#004620"},
     3: {"top": "#26a641", "front": "#1e8535", "right": "#186b2b"},
     4: {"top": "#39d353", "front": "#2eaa43", "right": "#258836"},
-}
-
-HOVER_COLORS = {
-    0: "#1e2430",
-    1: "#14603b",
-    2: "#009944",
-    3: "#32c755",
-    4: "#4deb6a",
 }
 
 MONTH_NAMES = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
@@ -156,16 +148,18 @@ def rgb_str(color: tuple) -> str:
     return f"rgb({color[0]},{color[1]},{color[2]})"
 
 
-def render_ansi_art_svg(grid: list[list[dict]]) -> tuple[str, str, str]:
+def render_ansi_art_svg(grid: list[list[dict]]) -> tuple[str, str, str, list[dict], str]:
     """Render ANSI art with neon glow overlays.
 
-    Returns (art_svg, outline_svg, purple_glow_svg).
+    Returns (art_svg, outline_svg, purple_glow_svg, edge_anchors, char_mask_d).
     - art: full character rendered as colored rects+text (dimmed)
     - outline: purple silhouette edge (top + sides only, no bottom)
     - purple_glow: clothing/hair purple parts
+    - edge_anchors: list of {"x", "y", "side"} for circuit trace origins
+    - char_mask_d: SVG path d-attribute for character silhouette (pixel-level)
     """
     if not grid:
-        return "", "", ""
+        return "", "", "", [], ""
 
     num_rows = len(grid)
     num_cols = max(len(row) for row in grid) if grid else 80
@@ -207,6 +201,7 @@ def render_ansi_art_svg(grid: list[list[dict]]) -> tuple[str, str, str]:
     art_parts = []
     outline_rects = []
     purple_rects = []
+    edge_cells = []  # collect (x, y, side) for circuit trace anchors
 
     art_parts.append(f'<g class="motd-art" opacity="0.25">')
 
@@ -250,8 +245,49 @@ def render_ansi_art_svg(grid: list[list[dict]]) -> tuple[str, str, str]:
                     f'<rect x="{x:.1f}" y="{y:.1f}" width="{cell_w:.1f}" '
                     f'height="{cell_h:.1f}" fill="#7c3aed" rx="0.5"/>'
                 )
+                # Determine which side this edge is on
+                cx = x + cell_w / 2
+                cy = y + cell_h / 2
+                if ci > 0 and (ci >= num_cols - 1 or not filled[ri][ci + 1]):
+                    edge_cells.append({"x": cx, "y": cy, "side": "right"})
+                elif ci == 0 or not filled[ri][ci - 1]:
+                    edge_cells.append({"x": cx, "y": cy, "side": "left"})
+                elif ri == 0 or not filled[ri - 1][ci]:
+                    edge_cells.append({"x": cx, "y": cy, "side": "top"})
 
     art_parts.append("</g>")
+
+    # Build character silhouette path from filled grid (row-run merging)
+    # Each contiguous run of filled cells in a row → one rect hole
+    char_holes = []
+    for ri, frow in enumerate(filled):
+        run_start = None
+        for ci in range(len(frow)):
+            if frow[ci]:
+                if run_start is None:
+                    run_start = ci
+            else:
+                if run_start is not None:
+                    x1 = offset_x + run_start * cell_w
+                    y1 = offset_y + ri * cell_h
+                    x2 = offset_x + ci * cell_w
+                    y2 = y1 + cell_h
+                    char_holes.append(
+                        f"M {x1:.1f} {y1:.1f} L {x2:.1f} {y1:.1f} "
+                        f"L {x2:.1f} {y2:.1f} L {x1:.1f} {y2:.1f} Z"
+                    )
+                    run_start = None
+        # Close run at end of row
+        if run_start is not None:
+            x1 = offset_x + run_start * cell_w
+            y1 = offset_y + ri * cell_h
+            x2 = offset_x + len(frow) * cell_w
+            y2 = y1 + cell_h
+            char_holes.append(
+                f"M {x1:.1f} {y1:.1f} L {x2:.1f} {y1:.1f} "
+                f"L {x2:.1f} {y2:.1f} L {x1:.1f} {y2:.1f} Z"
+            )
+    char_mask_d = " ".join(char_holes)
 
     art_svg = "\n".join(art_parts)
 
@@ -267,7 +303,7 @@ def render_ansi_art_svg(grid: list[list[dict]]) -> tuple[str, str, str]:
         + "\n</g>"
     ) if purple_rects else ""
 
-    return art_svg, outline_svg, purple_svg
+    return art_svg, outline_svg, purple_svg, edge_cells, char_mask_d
 
 
 # --- Contribution Data ---
@@ -528,6 +564,225 @@ def render_lang_chart(languages: list[dict]) -> str:
     return "\n".join(parts)
 
 
+# --- Circuit Trace Rendering ---
+
+def _bezier_approx_len(p0, p1, p2, p3, steps=20):
+    """Approximate cubic bezier length by sampling."""
+    length = 0.0
+    prev = p0
+    for i in range(1, steps + 1):
+        t = i / steps
+        u = 1 - t
+        x = u**3 * p0[0] + 3 * u**2 * t * p1[0] + 3 * u * t**2 * p2[0] + t**3 * p3[0]
+        y = u**3 * p0[1] + 3 * u**2 * t * p1[1] + 3 * u * t**2 * p2[1] + t**3 * p3[1]
+        dx, dy = x - prev[0], y - prev[1]
+        length += math.sqrt(dx * dx + dy * dy)
+        prev = (x, y)
+    return length
+
+
+def render_circuit_traces(edge_anchors: list[dict], count: int = 24,
+                          seed: int = 42) -> str:
+    """Render GPU-style traces with Knight Rider comet effect.
+
+    A bright dot travels along each path with a long fading trail behind it,
+    like a comet. Nothing stays lit — the trail moves with the dot.
+    """
+    if not edge_anchors:
+        return ""
+
+    rng = random.Random(seed)
+
+    left = sorted([a for a in edge_anchors if a["side"] == "left"], key=lambda a: a["y"])
+    right = sorted([a for a in edge_anchors if a["side"] == "right"], key=lambda a: a["y"])
+    top = sorted([a for a in edge_anchors if a["side"] == "top"], key=lambda a: a["x"])
+
+    def pick_spaced(anchors, n):
+        if len(anchors) <= n:
+            return anchors
+        step = len(anchors) / n
+        return [anchors[int(i * step)] for i in range(n)]
+
+    # Distribute count across sides proportionally
+    n_left = max(1, round(count * 0.4))
+    n_right = max(1, round(count * 0.4))
+    n_top = max(1, count - n_left - n_right)
+    chosen = []
+    chosen += [(a, "left") for a in pick_spaced(left, n_left)]
+    chosen += [(a, "right") for a in pick_spaced(right, n_right)]
+    chosen += [(a, "top") for a in pick_spaced(top, n_top)]
+    rng.shuffle(chosen)
+    chosen = chosen[:count]
+
+    parts = []
+    parts.append('<g class="circuit-traces">')
+
+    for i, (anchor, side) in enumerate(chosen):
+        ax, ay = anchor["x"], anchor["y"]
+        tid = f"tr{i}"
+
+        if side == "left":
+            ex, ey = -5, max(10, min(SVG_HEIGHT - 10, ay + rng.uniform(-80, 80)))
+            c1x = ax - (ax - ex) * 0.3 + rng.uniform(-20, 20)
+            c1y = ay + rng.uniform(-30, 30)
+            c2x = ex + (ax - ex) * 0.15
+            c2y = ey + rng.uniform(-20, 20)
+        elif side == "right":
+            ex, ey = SVG_WIDTH + 5, max(10, min(SVG_HEIGHT - 10, ay + rng.uniform(-80, 80)))
+            c1x = ax + (ex - ax) * 0.3 + rng.uniform(-20, 20)
+            c1y = ay + rng.uniform(-30, 30)
+            c2x = ex - (ex - ax) * 0.15
+            c2y = ey + rng.uniform(-20, 20)
+        else:
+            ex = max(10, min(SVG_WIDTH - 10, ax + rng.uniform(-100, 100)))
+            ey = -5
+            c1x = ax + rng.uniform(-30, 30)
+            c1y = ay - ay * 0.3
+            c2x = ex + rng.uniform(-20, 20)
+            c2y = ey + ay * 0.15
+
+        path_d = (
+            f"M {ax:.1f} {ay:.1f} "
+            f"C {c1x:.1f} {c1y:.1f}, {c2x:.1f} {c2y:.1f}, {ex:.1f} {ey:.1f}"
+        )
+        plen = _bezier_approx_len((ax, ay), (c1x, c1y), (c2x, c2y), (ex, ey))
+        plen = max(plen, 1)
+
+        width = rng.uniform(0.8, 1.5)
+        # Travel time + pause before next loop
+        travel = 3.0 + plen / 120
+        dur = f"{travel * 1.4:.1f}s"  # 40% pause at end
+        begin = f"{i * 0.9:.1f}s"
+        # Comet travels 0%→70% of dur, pauses 70%→100%
+        t_end = 0.70
+
+        # Trail lengths (percentage of path) — layered for gradient fade
+        trail_outer = min(plen * 0.35, 150)  # long dim outer glow
+        trail_mid = min(plen * 0.20, 90)     # medium
+        trail_core = min(plen * 0.08, 35)    # bright short core
+        # Gap = total path len so only one dash visible at a time
+        gap = plen + trail_outer
+
+        # offset: start at +gap (hidden), end at -plen (fully passed)
+        off_start = f"{gap:.1f}"
+        off_end = f"{-plen:.1f}"
+
+        # Hidden reference path
+        parts.append(f'<path id="{tid}" d="{path_d}" fill="none" stroke="none"/>')
+
+        # Base wire — visible circuit trace from outline to edge
+        parts.append(
+            f'<path d="{path_d}" fill="none" '
+            f'stroke="#4c1d95" stroke-width="{width + 0.3:.1f}" stroke-linecap="round" '
+            f'opacity="0.55"/>'
+        )
+
+        # Layer 1: outer glow (widest trail, dimmest)
+        parts.append(
+            f'<path d="{path_d}" fill="none" '
+            f'stroke="#7c3aed" stroke-width="{width + 2:.1f}" stroke-linecap="round" '
+            f'stroke-dasharray="{trail_outer:.1f} {gap:.1f}" '
+            f'stroke-dashoffset="{off_start}" opacity="0.25">'
+            f'<animate attributeName="stroke-dashoffset" '
+            f'values="{off_start};{off_end};{off_start}" '
+            f'keyTimes="0;{t_end};1" calcMode="spline" '
+            f'keySplines="0.4 0 0.6 1;0 0 1 1" '
+            f'dur="{dur}" begin="{begin}" repeatCount="indefinite"/>'
+            f'</path>'
+        )
+
+        # Layer 2: mid trail
+        parts.append(
+            f'<path d="{path_d}" fill="none" '
+            f'stroke="#a855f7" stroke-width="{width + 0.8:.1f}" stroke-linecap="round" '
+            f'stroke-dasharray="{trail_mid:.1f} {gap:.1f}" '
+            f'stroke-dashoffset="{off_start}" opacity="0.5">'
+            f'<animate attributeName="stroke-dashoffset" '
+            f'values="{off_start};{off_end};{off_start}" '
+            f'keyTimes="0;{t_end};1" calcMode="spline" '
+            f'keySplines="0.4 0 0.6 1;0 0 1 1" '
+            f'dur="{dur}" begin="{begin}" repeatCount="indefinite"/>'
+            f'</path>'
+        )
+
+        # Layer 3: bright core trail
+        parts.append(
+            f'<path d="{path_d}" fill="none" '
+            f'stroke="#c084fc" stroke-width="{width * 0.5:.1f}" stroke-linecap="round" '
+            f'stroke-dasharray="{trail_core:.1f} {gap:.1f}" '
+            f'stroke-dashoffset="{off_start}" opacity="0.8">'
+            f'<animate attributeName="stroke-dashoffset" '
+            f'values="{off_start};{off_end};{off_start}" '
+            f'keyTimes="0;{t_end};1" calcMode="spline" '
+            f'keySplines="0.4 0 0.6 1;0 0 1 1" '
+            f'dur="{dur}" begin="{begin}" repeatCount="indefinite"/>'
+            f'</path>'
+        )
+
+        # Layer 4: bright dot head
+        parts.append(
+            f'<circle r="2.5" fill="#e9d5ff" opacity="0">'
+            f'<animateMotion dur="{dur}" begin="{begin}" repeatCount="indefinite" '
+            f'keyPoints="0;1;1" keyTimes="0;{t_end};1" calcMode="spline" '
+            f'keySplines="0.4 0 0.6 1;0 0 1 1">'
+            f'<mpath href="#{tid}"/>'
+            f'</animateMotion>'
+            f'<animate attributeName="opacity" '
+            f'values="0;1;1;0;0" '
+            f'keyTimes="0;0.02;{t_end - 0.02};{t_end};1" '
+            f'dur="{dur}" begin="{begin}" repeatCount="indefinite"/>'
+            f'</circle>'
+        )
+
+    parts.append("</g>")
+    return "\n".join(parts)
+
+
+# --- Cyber Particle Rendering ---
+
+PARTICLE_COLORS = ["#39d353", "#26a641", "#00ff41", "#0ff", "#2eaa43"]
+
+# Half-width katakana, digits, symbols — matrix rain aesthetic
+GARBAGE_CHARS = (
+    "ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜﾝ"
+    "0123456789"
+    "{}[]|/:;=+*#@$%!?"
+)
+
+
+def render_particles(count: int = 40, seed: int = 7) -> str:
+    """Render falling garbage-character rain with depth (near/far layers)."""
+    rng = random.Random(seed)
+    parts = []
+    parts.append('<g class="particles">')
+
+    for i in range(count):
+        # depth: 0.0 (far/small) → 1.0 (near/large)
+        depth = rng.random()
+
+        x = rng.uniform(10, SVG_WIDTH - 10)
+        font_size = 5 + depth * 14          # 5–19px
+        color = rng.choice(PARTICLE_COLORS)
+        opacity = 0.1 + depth * 0.6         # 0.1–0.7
+        duration = 14 - depth * 9           # 14s(far/slow) → 5s(near/fast)
+        delay = rng.uniform(0, 12)
+        drift = rng.uniform(-10, 10) * (1 - depth * 0.5)
+        ch = rng.choice(GARBAGE_CHARS)
+
+        parts.append(
+            f'<text class="particle" x="{x:.1f}" y="-10" '
+            f'fill="{color}" opacity="{opacity:.2f}" '
+            f'font-family="monospace" font-size="{font_size:.1f}px" '
+            f'text-anchor="middle" '
+            f'style="animation-duration:{duration:.1f}s;'
+            f'animation-delay:{delay:.1f}s;'
+            f'--drift:{drift:.1f}px;">{ch}</text>'
+        )
+
+    parts.append("</g>")
+    return "\n".join(parts)
+
+
 # --- 3D Bar Rendering ---
 
 def bar_height(level: int, count: int) -> float:
@@ -560,7 +815,8 @@ def points_str(pts: list[tuple]) -> str:
 
 def generate_svg(days: list[dict], total: int,
                  art_base: str = "", art_outline: str = "",
-                 art_purple: str = "", lang_chart: str = "") -> str:
+                 art_purple: str = "", lang_chart: str = "",
+                 circuit_svg: str = "", char_mask_d: str = "") -> str:
     """Generate the complete SVG string."""
     bars = []
     for d in days:
@@ -580,6 +836,17 @@ def generate_svg(days: list[dict], total: int,
             month_labels.append({"name": MONTH_NAMES[month_idx], "week": d["week"]})
 
     svg_parts = []
+
+    # Build clip-path that excludes exact character pixels (even-odd holes)
+    if char_mask_d:
+        clip_def = (
+            f'<clipPath id="clip-outside-char">'
+            f'<path d="M 0 0 L {SVG_WIDTH} 0 L {SVG_WIDTH} {SVG_HEIGHT} L 0 {SVG_HEIGHT} Z '
+            f'{char_mask_d}" clip-rule="evenodd"/>'
+            f'</clipPath>'
+        )
+    else:
+        clip_def = ""
 
     # SVG header + filters + styles
     svg_parts.append(f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {SVG_WIDTH} {SVG_HEIGHT}" width="{SVG_WIDTH}" height="{SVG_HEIGHT}">
@@ -602,6 +869,15 @@ def generate_svg(days: list[dict], total: int,
       <feMergeNode in="SourceGraphic"/>
     </feMerge>
   </filter>
+  <filter id="glow-trace" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
+    <feMerge>
+      <feMergeNode in="blur"/>
+      <feMergeNode in="blur"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+  {clip_def}
 
   <style>
     .bg {{ fill: #0d1117; }}
@@ -611,26 +887,22 @@ def generate_svg(days: list[dict], total: int,
       0%, 100% {{ opacity: 0.2; }}
       50% {{ opacity: 0.55; }}
     }}
+    .circuit-traces {{ filter: url(#glow-trace); clip-path: url(#clip-outside-char); }}
     .bar-group {{
       opacity: 0;
       animation: rise 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards,
-                 wave 5s ease-in-out infinite;
+                 wave 4s ease-in-out infinite;
     }}
     @keyframes rise {{
       from {{ opacity: 0; transform: translateY(18px); }}
       to {{ opacity: 1; transform: translateY(0); }}
     }}
     @keyframes wave {{
-      0%, 100% {{ transform: translateY(0); }}
-      50% {{ transform: translateY(-2px); }}
-    }}
-    @keyframes glow-pulse {{
-      0%, 100% {{ filter: drop-shadow(0 0 3px rgba(57, 211, 83, 0.4)); }}
-      50% {{ filter: drop-shadow(0 0 8px rgba(57, 211, 83, 0.8)); }}
-    }}
-    .bar-group:hover {{
-      animation: glow-pulse 1.5s ease-in-out infinite;
-      filter: drop-shadow(0 0 4px rgba(57, 211, 83, 0.5));
+      0%, 100% {{ transform: translateY(0); filter: brightness(1); }}
+      8%  {{ transform: translateY(-5px); filter: brightness(1.3); }}
+      16% {{ transform: translateY(0); filter: brightness(1); }}
+      22% {{ transform: translateY(-3px); filter: brightness(1.15); }}
+      30% {{ transform: translateY(0); filter: brightness(1); }}
     }}
     .lang-seg {{
       transform: rotate(-90deg);
@@ -641,14 +913,6 @@ def generate_svg(days: list[dict], total: int,
     @keyframes seg-draw {{
       from {{ stroke-dasharray: 0 9999; opacity: 0.5; }}
       to {{ opacity: 1; }}
-    }}''')
-
-    for level in HOVER_COLORS:
-        svg_parts.append(f'''
-    .bar-group:hover .top-{level},
-    .bar-group:hover .front-{level},
-    .bar-group:hover .right-{level} {{
-      filter: brightness(1.4);
     }}''')
 
     svg_parts.append('''
@@ -672,6 +936,11 @@ def generate_svg(days: list[dict], total: int,
     if art_purple:
         svg_parts.append("<!-- Purple glow (clothes/hair) -->")
         svg_parts.append(art_purple)
+
+    # Circuit traces from character outline
+    if circuit_svg:
+        svg_parts.append("<!-- Circuit Traces -->")
+        svg_parts.append(circuit_svg)
 
     # Title
     svg_parts.append(f'''
@@ -702,7 +971,8 @@ def generate_svg(days: list[dict], total: int,
         colors = COLORS[level]
         poly = bar["poly"]
         delay = (bar["week"] + bar["day"]) * 0.015
-        wave_delay = delay + 0.6
+        # Wave ripple: spread delays across 2s so wave visibly sweeps across
+        wave_delay = (bar["week"] + bar["day"]) * 0.04 + 1.0
         count = bar["count"]
         dt = bar["date"]
         s = "s" if count != 1 else ""
@@ -751,16 +1021,24 @@ def main():
 
     # Load and render ANSI art as layered glow effects
     art_base = art_outline = art_purple = ""
+    edge_anchors = []
+    char_mask_d = ""
     motd_path = MOTD_ART
     if os.path.exists(motd_path):
         print(f"Loading MOTD art from {motd_path}...")
         grid = parse_ansi_art(motd_path)
         print(f"Parsed {len(grid)} rows, max {max(len(r) for r in grid)} cols.")
-        art_base, art_outline, art_purple = render_ansi_art_svg(grid)
+        art_base, art_outline, art_purple, edge_anchors, char_mask_d = render_ansi_art_svg(grid)
         print(f"Art SVG: base={len(art_base)}B, outline={len(art_outline)}B, "
-              f"purple={len(art_purple)}B")
+              f"purple={len(art_purple)}B, anchors={len(edge_anchors)}, "
+              f"mask={len(char_mask_d)}B")
     else:
         print(f"MOTD art not found at {motd_path}, skipping background.")
+
+    # Generate circuit traces from character outline
+    circuit_svg = render_circuit_traces(edge_anchors) if edge_anchors else ""
+    if circuit_svg:
+        print(f"Circuit traces: {len(circuit_svg)}B")
 
     # Fetch language stats
     if TOKEN:
@@ -774,7 +1052,8 @@ def main():
         languages = dummy_languages()
     lang_chart = render_lang_chart(languages)
 
-    svg = generate_svg(days, total, art_base, art_outline, art_purple, lang_chart)
+    svg = generate_svg(days, total, art_base, art_outline, art_purple,
+                       lang_chart, circuit_svg, char_mask_d)
 
     with open(OUTPUT, "w", encoding="utf-8") as f:
         f.write(svg)
