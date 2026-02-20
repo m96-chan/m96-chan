@@ -1,6 +1,11 @@
-<img src="https://github-readme-stats.vercel.app/api/top-langs?username=m96-chan&show_icons=true&locale=ja&layout=compact&theme=chartreuse-dark" alt="Top Languages" /></p>
+<a href="https://raw.githubusercontent.com/m96-chan/m96-chan/main/contribution-3d.svg">
+  <img src="./contribution-3d.svg" alt="3D Contribution Graph" width="100%">
+</a>
 
-<img src="https://github-readme-stats.vercel.app/api?username=m96-chan&show_icons=true&locale=ja&theme=chartreuse-dark" alt="GitHub Stats" width="410" /></p>
+<p>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=m96-chan&show_icons=true&locale=ja&layout=compact&theme=chartreuse-dark" alt="Top Languages" />
+  <img src="https://github-readme-stats.vercel.app/api?username=m96-chan&show_icons=true&locale=ja&theme=chartreuse-dark" alt="GitHub Stats" width="410" />
+</p>
 
 <!-- <img src="https://github-profile-trophy.vercel.app/?username=m96-chan&theme=juicyfresh&no-bg=true" /> -->
 
