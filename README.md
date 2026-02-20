@@ -74,9 +74,9 @@ Architected backend, admin tools, data pipelines, and AI integrations.
 ## Social Links
 
 - **GitHub**: https://github.com/m96-chan  
-- **X (Twitter)**: TBD  
+- **X (Twitter)**: https://x.com/djsaxia
 - **Booth**:  TBD
-- **VRChat**: TBD  
-- **LinkedIn**: TBD
+- **VRChat**: https://vrchat.com/home/user/usr_a94dcf41-3435-473e-bac8-1a2abbd1b3bd  
+- **LinkedIn**: https://www.linkedin.com/in/yusuke-harada-797698276/
 
 ---
