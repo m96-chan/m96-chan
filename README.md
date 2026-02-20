@@ -2,80 +2,70 @@
   <img src="./contribution-3d.svg" alt="3D Contribution Graph" width="100%">
 </a>
 
+<h3 align="center">Full-Stack Engineer & R&D Specialist</h3>
 
-## About Me
-
-I am a full-stack engineer and R&D specialist with a strong focus on **real-time audio processing**, **LLM-based automation**, and **immersive 3D/VR experiences**.  
-My work spans low-level system programming, cross-platform audio capture, shader development for VRChat, and building AI-driven pipelines that enhance both productivity and creativity.
-
-I explore the boundaries between **real-time systems**, **generative AI**, and **interactive environments**, developing practical tools such as *ProcessAudioTap* (per-process audio capture across Windows/macOS/Linux), VRChat automation utilities, and advanced AudioLink-driven visual effects.
-
-My engineering philosophy emphasizes **performance, clarity, and reliability**—designing systems that run fast, scale smoothly, and integrate elegantly with complex pipelines. Whether building audio drivers, multimodal AI pipelines, GPU shaders, or end-to-end backend systems, I deliver solutions that are technically deep and user-centric.
-
+<p align="center">
+  <a href="https://x.com/djsaxia"><img src="https://img.shields.io/badge/X-@djsaxia-000?style=flat-square&logo=x" alt="X"></a>
+  <a href="https://vrchat.com/home/user/usr_a94dcf41-3435-473e-bac8-1a2abbd1b3bd"><img src="https://img.shields.io/badge/VRChat-m96--chan-1DB954?style=flat-square&logo=vrchat&logoColor=white" alt="VRChat"></a>
+  <a href="https://www.linkedin.com/in/yusuke-harada-797698276/"><img src="https://img.shields.io/badge/LinkedIn-Yusuke_Harada-0A66C2?style=flat-square&logo=linkedin" alt="LinkedIn"></a>
+</p>
 
 ---
 
-## Skill Set
+Building at the intersection of **real-time systems**, **generative AI**, and **interactive environments**.
 
-### 🖥️ Languages & Frameworks
-- **Python**, **TypeScript/JavaScript**, **C#**, **C/C++**, **Rust (basic)**
-- **React / Next.js**, **Node.js**, **FastAPI**, **Electron**
-- **Unity (C#)**, **ShaderLab**, **HLSL**
-
-### 🔊 Audio & Realtime Processing
-- WASAPI / CoreAudio / PulseAudio / PipeWire  
-- Real-time PCM manipulation (EQ, filters, mixing, VAD)
-- Low-latency audio pipelines, streaming, WebRTC integration
-
-### 🤖 AI / Machine Learning
-- Whisper (OpenAI, Faster-Whisper), pyannote.audio  
-- RAG pipeline engineering  
-- LLM orchestration (OpenAI, Claude, Gemini)  
-- Custom TTS models (ElevenLabs, XTTS)
-
-### 🌐 Cloud / Infra / DevOps
-- AWS (EC2, S3, CloudFront, Lambda, Redshift Serverless)  
-- GCP (Cloud Run, Vertex AI, Cloud Functions)  
-- Docker, GitHub Actions, PyPI trusted publishing  
-- CI/CD, monitoring, observability
-
-### 🎧 XR / Graphics
-- VRChat world design & automation  
-- AudioLink-driven shaders  
-- Unity URP built-in rendering pipelines  
-- Real-time post-processing & distortion FX
-
+I specialize in low-level system programming, cross-platform audio capture, shader development for VRChat, and AI-driven pipelines. My engineering philosophy: **performance, clarity, and reliability**.
 
 ---
 
-## Featured Projects
+### Tech Stack
 
-### 🔊 **ProcessAudioTap (ProcTap)**
-Cross-platform per-process audio capture library (Win/macOS/Linux).  
-Features low-latency audio taps, real-time filters, CLI utilities, plugin architecture, and VRChat integration.
+**Languages**
 
-### 🎵 **VRChat AudioLink Shader Suite**
-Custom shaders reacting to audio spectra, used in club events, DJ worlds, and visual installations.
+![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![C#](https://img.shields.io/badge/-C%23-239120?style=flat-square&logo=csharp&logoColor=white)
+![C++](https://img.shields.io/badge/-C++-00599C?style=flat-square&logo=cplusplus&logoColor=white)
+![Rust](https://img.shields.io/badge/-Rust-000?style=flat-square&logo=rust)
+![HLSL](https://img.shields.io/badge/-HLSL-5C2D91?style=flat-square)
 
-### 🤖 **LLM-powered Automation Pipeline**
-Unified workflow that integrates Whisper → LLM → Slack/Discord bots.  
-Supports diarization, summarization, topic detection, and automated posting.
+**Frameworks & Tools**
 
-### 🎮 **VRChat Automation Tools**
-Tools for avatar detection, join-log analysis, OSC automation, and AudioLink-reactive effects.
+![React](https://img.shields.io/badge/-React-61DAFB?style=flat-square&logo=react&logoColor=black)
+![Next.js](https://img.shields.io/badge/-Next.js-000?style=flat-square&logo=next.js)
+![FastAPI](https://img.shields.io/badge/-FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
+![Node.js](https://img.shields.io/badge/-Node.js-339933?style=flat-square&logo=node.js&logoColor=white)
+![Electron](https://img.shields.io/badge/-Electron-47848F?style=flat-square&logo=electron&logoColor=white)
+![Unity](https://img.shields.io/badge/-Unity-000?style=flat-square&logo=unity)
+![Docker](https://img.shields.io/badge/-Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 
-### 📊 **SecretProject**
-Marketing/CRM analytics platform with AI-powered predictive modules, built with Next.js, Python, and Redshift.  
-Architected backend, admin tools, data pipelines, and AI integrations.
+**Cloud & Infra**
+
+![AWS](https://img.shields.io/badge/-AWS-232F3E?style=flat-square&logo=amazonwebservices&logoColor=white)
+![GCP](https://img.shields.io/badge/-GCP-4285F4?style=flat-square&logo=googlecloud&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/-GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
+
+**AI / Audio / XR**
+
+![OpenAI](https://img.shields.io/badge/-OpenAI-412991?style=flat-square&logo=openai&logoColor=white)
+![Claude](https://img.shields.io/badge/-Claude-D97757?style=flat-square&logo=anthropic&logoColor=white)
+![Whisper](https://img.shields.io/badge/-Whisper-74AA9C?style=flat-square)
+![PipeWire](https://img.shields.io/badge/-PipeWire-1B5E20?style=flat-square)
+![AudioLink](https://img.shields.io/badge/-AudioLink-FF6F00?style=flat-square)
+![VRChat SDK](https://img.shields.io/badge/-VRChat_SDK-1DB954?style=flat-square)
 
 ---
 
-## Social Links
+### Featured Projects
 
-- **GitHub**: https://github.com/m96-chan  
-- **X (Twitter)**: https://x.com/djsaxia
-- **Booth**:  TBD
-- **VRChat**: https://vrchat.com/home/user/usr_a94dcf41-3435-473e-bac8-1a2abbd1b3bd  
-- **LinkedIn**: https://www.linkedin.com/in/yusuke-harada-797698276/
+| Project | Description |
+|---------|-------------|
+| **[0xBitNet](https://github.com/m96-chan/0xBitNet)** | Run BitNet b1.58 ternary LLMs with WebGPU — in browsers and native apps. |
+| **[PyGPUkit](https://github.com/m96-chan/PyGPUkit)** | Minimal GPU runtime for Python — high-performance CUDA kernels, memory management, and LLM inference without heavy dependencies. |
+| **[ProcessAudioTap](https://github.com/m96-chan/ProcTap)** | Cross-platform per-process audio capture (Win/macOS/Linux). Low-latency taps, real-time filters, plugin architecture. |
+| **AudioLink Shader Suite** | Custom VRChat shaders reacting to audio spectra. Used in club events, DJ worlds, and visual installations. |
+| **LLM Automation Pipeline** | Whisper &rarr; LLM &rarr; Slack/Discord. Diarization, summarization, topic detection, automated posting. |
+| **VRChat Automation Tools** | Avatar detection, join-log analysis, OSC automation, and AudioLink-reactive effects. |
 
 ---
