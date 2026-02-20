@@ -21,7 +21,7 @@ USERNAME = os.environ.get("GITHUB_USERNAME", "m96-chan")
 TOKEN = os.environ.get("GITHUB_TOKEN", "")
 OUTPUT = os.environ.get("OUTPUT_FILE", "contribution-3d.svg")
 SCRIPT_DIR = Path(__file__).parent
-MOTD_ART = os.environ.get("MOTD_ART", str(SCRIPT_DIR.parent / ".." / "dotfiles" / ".motd_art"))
+MOTD_ART = os.environ.get("MOTD_ART", str(SCRIPT_DIR.parent / ".motd_art"))
 
 # Isometric projection parameters
 ISO_X_SCALE = 14.0
