@@ -853,24 +853,14 @@ def generate_svg(days: list[dict], total: int,
 <defs>
   <!-- Neon glow filters -->
   <filter id="glow-strong" x="-100%" y="-100%" width="300%" height="300%">
-    <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur"/>
+    <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur"/>
     <feMerge>
-      <feMergeNode in="blur"/>
-      <feMergeNode in="blur"/>
       <feMergeNode in="blur"/>
       <feMergeNode in="SourceGraphic"/>
     </feMerge>
   </filter>
   <filter id="glow-purple" x="-50%" y="-50%" width="200%" height="200%">
     <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur"/>
-    <feMerge>
-      <feMergeNode in="blur"/>
-      <feMergeNode in="blur"/>
-      <feMergeNode in="SourceGraphic"/>
-    </feMerge>
-  </filter>
-  <filter id="glow-trace" x="-50%" y="-50%" width="200%" height="200%">
-    <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
     <feMerge>
       <feMergeNode in="blur"/>
       <feMergeNode in="blur"/>
@@ -887,7 +877,7 @@ def generate_svg(days: list[dict], total: int,
       0%, 100% {{ opacity: 0.2; }}
       50% {{ opacity: 0.55; }}
     }}
-    .circuit-traces {{ filter: url(#glow-trace); clip-path: url(#clip-outside-char); }}
+    .circuit-traces {{ clip-path: url(#clip-outside-char); }}
     .bar-group {{
       opacity: 0;
       animation: rise 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards,
@@ -898,11 +888,11 @@ def generate_svg(days: list[dict], total: int,
       to {{ opacity: 1; transform: translateY(0); }}
     }}
     @keyframes wave {{
-      0%, 100% {{ transform: translateY(0); filter: brightness(1); }}
-      8%  {{ transform: translateY(-5px); filter: brightness(1.3); }}
-      16% {{ transform: translateY(0); filter: brightness(1); }}
-      22% {{ transform: translateY(-3px); filter: brightness(1.15); }}
-      30% {{ transform: translateY(0); filter: brightness(1); }}
+      0%, 100% {{ transform: translateY(0); opacity: 1; }}
+      8%  {{ transform: translateY(-5px); opacity: 0.75; }}
+      16% {{ transform: translateY(0); opacity: 1; }}
+      22% {{ transform: translateY(-3px); opacity: 0.85; }}
+      30% {{ transform: translateY(0); opacity: 1; }}
     }}
     .lang-seg {{
       transform: rotate(-90deg);
