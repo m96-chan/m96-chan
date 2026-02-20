@@ -2,7 +2,7 @@
   <img src="./contribution-3d.svg" alt="3D Contribution Graph" width="100%">
 </a>
 
-<h3 align="center">Full-Stack Engineer & R&D Specialist</h3>
+<h3 align="center">Full-Stack (L1-L7) Engineer & R&D Specialist</h3>
 
 <p align="center">
   <a href="https://x.com/djsaxia"><img src="https://img.shields.io/badge/X-@djsaxia-000?style=flat-square&logo=x" alt="X"></a>
