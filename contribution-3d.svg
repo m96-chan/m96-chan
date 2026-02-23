@@ -2822,7 +2822,7 @@
 </g>
 
 <!-- Title -->
-<text class="title" x="20" y="28">2,467 contributions in the last year</text>
+<text class="title" x="20" y="28">2,503 contributions in the last year</text>
 <text class="subtitle" x="20" y="46">@m96-chan</text>
 
 <text class="label" x="115.0" y="330.0" text-anchor="middle">Feb</text>
@@ -2858,9 +2858,9 @@
 <text class="label" x="28.32" y="332.38" text-anchor="end">Fri</text>
 
 <g class="bar-group" style="animation-delay: 0.855s, 3.280s;"><title>34 contributions on 2026-02-21</title>
-  <polygon class="right-2" points="660.6,110.75 672.72,114.5 672.72,132.5 660.6,128.75" fill="#004620" stroke="#0d1117" stroke-width="0.5"/>
-  <polygon class="front-2" points="648.47,114.5 660.6,110.75 660.6,128.75 648.47,132.5" fill="#005828" stroke="#0d1117" stroke-width="0.5"/>
-  <polygon class="top-2" points="660.6,118.25 672.72,114.5 660.6,110.75 648.47,114.5" fill="#006d32" stroke="#0d1117" stroke-width="0.5"/>
+  <polygon class="right-1" points="660.6,113.25 672.72,117.0 672.72,132.5 660.6,128.75" fill="#072a19" stroke="#0d1117" stroke-width="0.5"/>
+  <polygon class="front-1" points="648.47,117.0 660.6,113.25 660.6,128.75 648.47,132.5" fill="#0a3520" stroke="#0d1117" stroke-width="0.5"/>
+  <polygon class="top-1" points="660.6,120.75 672.72,117.0 660.6,113.25 648.47,117.0" fill="#0e4429" stroke="#0d1117" stroke-width="0.5"/>
 </g>
 <g class="bar-group" style="animation-delay: 0.840s, 3.240s;"><title>7 contributions on 2026-02-14</title>
   <polygon class="right-1" points="648.47,121.5 660.6,125.25 660.6,136.25 648.47,132.5" fill="#072a19" stroke="#0d1117" stroke-width="0.5"/>
@@ -2878,9 +2878,9 @@
   <polygon class="top-1" points="636.35,128.25 648.47,124.5 636.35,120.75 624.22,124.5" fill="#0e4429" stroke="#0d1117" stroke-width="0.5"/>
 </g>
 <g class="bar-group" style="animation-delay: 0.825s, 3.200s;"><title>39 contributions on 2026-02-13</title>
-  <polygon class="right-2" points="660.6,118.25 672.72,122.0 672.72,140.0 660.6,136.25" fill="#004620" stroke="#0d1117" stroke-width="0.5"/>
-  <polygon class="front-2" points="648.47,122.0 660.6,118.25 660.6,136.25 648.47,140.0" fill="#005828" stroke="#0d1117" stroke-width="0.5"/>
-  <polygon class="top-2" points="660.6,125.75 672.72,122.0 660.6,118.25 648.47,122.0" fill="#006d32" stroke="#0d1117" stroke-width="0.5"/>
+  <polygon class="right-1" points="660.6,120.75 672.72,124.5 672.72,140.0 660.6,136.25" fill="#072a19" stroke="#0d1117" stroke-width="0.5"/>
+  <polygon class="front-1" points="648.47,124.5 660.6,120.75 660.6,136.25 648.47,140.0" fill="#0a3520" stroke="#0d1117" stroke-width="0.5"/>
+  <polygon class="top-1" points="660.6,128.25 672.72,124.5 660.6,120.75 648.47,124.5" fill="#0e4429" stroke="#0d1117" stroke-width="0.5"/>
 </g>
 <g class="bar-group" style="animation-delay: 0.825s, 3.200s;"><title>7 contributions on 2026-02-19</title>
   <polygon class="right-1" points="684.84,125.25 696.97,129.0 696.97,140.0 684.84,136.25" fill="#072a19" stroke="#0d1117" stroke-width="0.5"/>
@@ -2932,6 +2932,11 @@
   <polygon class="front-1" points="696.97,138.5 709.09,134.75 709.09,143.75 696.97,147.5" fill="#0a3520" stroke="#0d1117" stroke-width="0.5"/>
   <polygon class="top-1" points="709.09,142.25 721.22,138.5 709.09,134.75 696.97,138.5" fill="#0e4429" stroke="#0d1117" stroke-width="0.5"/>
 </g>
+<g class="bar-group" style="animation-delay: 0.795s, 3.120s;"><title>0 contributions on 2026-02-23</title>
+  <polygon class="right-0" points="733.34,142.75 745.47,146.5 745.47,147.5 733.34,143.75" fill="#0d1117" stroke="#0d1117" stroke-width="0.5"/>
+  <polygon class="front-0" points="721.22,146.5 733.34,142.75 733.34,143.75 721.22,147.5" fill="#11151a" stroke="#0d1117" stroke-width="0.5"/>
+  <polygon class="top-0" points="733.34,150.25 745.47,146.5 733.34,142.75 721.22,146.5" fill="#161b22" stroke="#0d1117" stroke-width="0.5"/>
+</g>
 <g class="bar-group" style="animation-delay: 0.780s, 3.080s;"><title>5 contributions on 2026-01-17</title>
   <polygon class="right-1" points="599.97,137.5 612.1,141.25 612.1,151.25 599.97,147.5" fill="#072a19" stroke="#0d1117" stroke-width="0.5"/>
   <polygon class="front-1" points="587.85,141.25 599.97,137.5 599.97,147.5 587.85,151.25" fill="#0a3520" stroke="#0d1117" stroke-width="0.5"/>
@@ -2962,7 +2967,7 @@
   <polygon class="front-0" points="709.09,150.25 721.22,146.5 721.22,147.5 709.09,151.25" fill="#11151a" stroke="#0d1117" stroke-width="0.5"/>
   <polygon class="top-0" points="721.22,154.0 733.34,150.25 721.22,146.5 709.09,150.25" fill="#161b22" stroke="#0d1117" stroke-width="0.5"/>
 </g>
-<g class="bar-group" style="animation-delay: 0.780s, 3.080s;"><title>122 contributions on 2026-02-22</title>
+<g class="bar-group" style="animation-delay: 0.780s, 3.080s;"><title>161 contributions on 2026-02-22</title>
   <polygon class="right-4" points="745.47,124.5 757.59,128.25 757.59,151.25 745.47,147.5" fill="#258836" stroke="#0d1117" stroke-width="0.5"/>
   <polygon class="front-4" points="733.34,128.25 745.47,124.5 745.47,147.5 733.34,151.25" fill="#2eaa43" stroke="#0d1117" stroke-width="0.5"/>
   <polygon class="top-4" points="745.47,132.0 757.59,128.25 745.47,124.5 733.34,128.25" fill="#39d353" stroke="#0d1117" stroke-width="0.5"/>
@@ -2993,9 +2998,9 @@
   <polygon class="top-0" points="684.84,157.75 696.97,154.0 684.84,150.25 672.72,154.0" fill="#161b22" stroke="#0d1117" stroke-width="0.5"/>
 </g>
 <g class="bar-group" style="animation-delay: 0.765s, 3.040s;"><title>68 contributions on 2026-02-09</title>
-  <polygon class="right-3" points="709.09,130.75 721.22,134.5 721.22,155.0 709.09,151.25" fill="#186b2b" stroke="#0d1117" stroke-width="0.5"/>
-  <polygon class="front-3" points="696.97,134.5 709.09,130.75 709.09,151.25 696.97,155.0" fill="#1e8535" stroke="#0d1117" stroke-width="0.5"/>
-  <polygon class="top-3" points="709.09,138.25 721.22,134.5 709.09,130.75 696.97,134.5" fill="#26a641" stroke="#0d1117" stroke-width="0.5"/>
+  <polygon class="right-2" points="709.09,133.25 721.22,137.0 721.22,155.0 709.09,151.25" fill="#004620" stroke="#0d1117" stroke-width="0.5"/>
+  <polygon class="front-2" points="696.97,137.0 709.09,133.25 709.09,151.25 696.97,155.0" fill="#005828" stroke="#0d1117" stroke-width="0.5"/>
+  <polygon class="top-2" points="709.09,140.75 721.22,137.0 709.09,133.25 696.97,137.0" fill="#006d32" stroke="#0d1117" stroke-width="0.5"/>
 </g>
 <g class="bar-group" style="animation-delay: 0.765s, 3.040s;"><title>0 contributions on 2026-02-15</title>
   <polygon class="right-0" points="733.34,150.25 745.47,154.0 745.47,155.0 733.34,151.25" fill="#0d1117" stroke="#0d1117" stroke-width="0.5"/>
@@ -3108,9 +3113,9 @@
   <polygon class="top-1" points="696.97,158.0 709.09,154.25 696.97,150.5 684.84,154.25" fill="#0e4429" stroke="#0d1117" stroke-width="0.5"/>
 </g>
 <g class="bar-group" style="animation-delay: 0.705s, 2.880s;"><title>36 contributions on 2025-12-13</title>
-  <polygon class="right-2" points="539.35,148.25 551.48,152.0 551.48,170.0 539.35,166.25" fill="#004620" stroke="#0d1117" stroke-width="0.5"/>
-  <polygon class="front-2" points="527.23,152.0 539.35,148.25 539.35,166.25 527.23,170.0" fill="#005828" stroke="#0d1117" stroke-width="0.5"/>
-  <polygon class="top-2" points="539.35,155.75 551.48,152.0 539.35,148.25 527.23,152.0" fill="#006d32" stroke="#0d1117" stroke-width="0.5"/>
+  <polygon class="right-1" points="539.35,150.75 551.48,154.5 551.48,170.0 539.35,166.25" fill="#072a19" stroke="#0d1117" stroke-width="0.5"/>
+  <polygon class="front-1" points="527.23,154.5 539.35,150.75 539.35,166.25 527.23,170.0" fill="#0a3520" stroke="#0d1117" stroke-width="0.5"/>
+  <polygon class="top-1" points="539.35,158.25 551.48,154.5 539.35,150.75 527.23,154.5" fill="#0e4429" stroke="#0d1117" stroke-width="0.5"/>
 </g>
 <g class="bar-group" style="animation-delay: 0.705s, 2.880s;"><title>12 contributions on 2025-12-19</title>
   <polygon class="right-1" points="563.6,152.75 575.73,156.5 575.73,170.0 563.6,166.25" fill="#072a19" stroke="#0d1117" stroke-width="0.5"/>
@@ -3148,9 +3153,9 @@
   <polygon class="top-0" points="527.23,176.5 539.35,172.75 527.23,169.0 515.1,172.75" fill="#161b22" stroke="#0d1117" stroke-width="0.5"/>
 </g>
 <g class="bar-group" style="animation-delay: 0.690s, 2.840s;"><title>93 contributions on 2025-12-12</title>
-  <polygon class="right-4" points="551.48,147.0 563.6,150.75 563.6,173.75 551.48,170.0" fill="#258836" stroke="#0d1117" stroke-width="0.5"/>
-  <polygon class="front-4" points="539.35,150.75 551.48,147.0 551.48,170.0 539.35,173.75" fill="#2eaa43" stroke="#0d1117" stroke-width="0.5"/>
-  <polygon class="top-4" points="551.48,154.5 563.6,150.75 551.48,147.0 539.35,150.75" fill="#39d353" stroke="#0d1117" stroke-width="0.5"/>
+  <polygon class="right-3" points="551.48,149.5 563.6,153.25 563.6,173.75 551.48,170.0" fill="#186b2b" stroke="#0d1117" stroke-width="0.5"/>
+  <polygon class="front-3" points="539.35,153.25 551.48,149.5 551.48,170.0 539.35,173.75" fill="#1e8535" stroke="#0d1117" stroke-width="0.5"/>
+  <polygon class="top-3" points="551.48,157.0 563.6,153.25 551.48,149.5 539.35,153.25" fill="#26a641" stroke="#0d1117" stroke-width="0.5"/>
 </g>
 <g class="bar-group" style="animation-delay: 0.690s, 2.840s;"><title>23 contributions on 2025-12-18</title>
   <polygon class="right-1" points="575.73,154.5 587.85,158.25 587.85,173.75 575.73,170.0" fill="#072a19" stroke="#0d1117" stroke-width="0.5"/>
@@ -3188,9 +3193,9 @@
   <polygon class="top-1" points="539.35,173.25 551.48,169.5 539.35,165.75 527.23,169.5" fill="#0e4429" stroke="#0d1117" stroke-width="0.5"/>
 </g>
 <g class="bar-group" style="animation-delay: 0.675s, 2.800s;"><title>96 contributions on 2025-12-11</title>
-  <polygon class="right-4" points="563.6,150.75 575.73,154.5 575.73,177.5 563.6,173.75" fill="#258836" stroke="#0d1117" stroke-width="0.5"/>
-  <polygon class="front-4" points="551.48,154.5 563.6,150.75 563.6,173.75 551.48,177.5" fill="#2eaa43" stroke="#0d1117" stroke-width="0.5"/>
-  <polygon class="top-4" points="563.6,158.25 575.73,154.5 563.6,150.75 551.48,154.5" fill="#39d353" stroke="#0d1117" stroke-width="0.5"/>
+  <polygon class="right-3" points="563.6,153.25 575.73,157.0 575.73,177.5 563.6,173.75" fill="#186b2b" stroke="#0d1117" stroke-width="0.5"/>
+  <polygon class="front-3" points="551.48,157.0 563.6,153.25 563.6,173.75 551.48,177.5" fill="#1e8535" stroke="#0d1117" stroke-width="0.5"/>
+  <polygon class="top-3" points="563.6,160.75 575.73,157.0 563.6,153.25 551.48,157.0" fill="#26a641" stroke="#0d1117" stroke-width="0.5"/>
 </g>
 <g class="bar-group" style="animation-delay: 0.675s, 2.800s;"><title>17 contributions on 2025-12-17</title>
   <polygon class="right-1" points="587.85,158.25 599.97,162.0 599.97,177.5 587.85,173.75" fill="#072a19" stroke="#0d1117" stroke-width="0.5"/>
@@ -3228,14 +3233,14 @@
   <polygon class="top-0" points="551.48,184.0 563.6,180.25 551.48,176.5 539.35,180.25" fill="#161b22" stroke="#0d1117" stroke-width="0.5"/>
 </g>
 <g class="bar-group" style="animation-delay: 0.660s, 2.760s;"><title>105 contributions on 2025-12-10</title>
-  <polygon class="right-4" points="575.73,154.5 587.85,158.25 587.85,181.25 575.73,177.5" fill="#258836" stroke="#0d1117" stroke-width="0.5"/>
-  <polygon class="front-4" points="563.6,158.25 575.73,154.5 575.73,177.5 563.6,181.25" fill="#2eaa43" stroke="#0d1117" stroke-width="0.5"/>
-  <polygon class="top-4" points="575.73,162.0 587.85,158.25 575.73,154.5 563.6,158.25" fill="#39d353" stroke="#0d1117" stroke-width="0.5"/>
+  <polygon class="right-3" points="575.73,157.0 587.85,160.75 587.85,181.25 575.73,177.5" fill="#186b2b" stroke="#0d1117" stroke-width="0.5"/>
+  <polygon class="front-3" points="563.6,160.75 575.73,157.0 575.73,177.5 563.6,181.25" fill="#1e8535" stroke="#0d1117" stroke-width="0.5"/>
+  <polygon class="top-3" points="575.73,164.5 587.85,160.75 575.73,157.0 563.6,160.75" fill="#26a641" stroke="#0d1117" stroke-width="0.5"/>
 </g>
 <g class="bar-group" style="animation-delay: 0.660s, 2.760s;"><title>64 contributions on 2025-12-16</title>
-  <polygon class="right-3" points="599.97,157.0 612.1,160.75 612.1,181.25 599.97,177.5" fill="#186b2b" stroke="#0d1117" stroke-width="0.5"/>
-  <polygon class="front-3" points="587.85,160.75 599.97,157.0 599.97,177.5 587.85,181.25" fill="#1e8535" stroke="#0d1117" stroke-width="0.5"/>
-  <polygon class="top-3" points="599.97,164.5 612.1,160.75 599.97,157.0 587.85,160.75" fill="#26a641" stroke="#0d1117" stroke-width="0.5"/>
+  <polygon class="right-2" points="599.97,159.5 612.1,163.25 612.1,181.25 599.97,177.5" fill="#004620" stroke="#0d1117" stroke-width="0.5"/>
+  <polygon class="front-2" points="587.85,163.25 599.97,159.5 599.97,177.5 587.85,181.25" fill="#005828" stroke="#0d1117" stroke-width="0.5"/>
+  <polygon class="top-2" points="599.97,167.0 612.1,163.25 599.97,159.5 587.85,163.25" fill="#006d32" stroke="#0d1117" stroke-width="0.5"/>
 </g>
 <g class="bar-group" style="animation-delay: 0.660s, 2.760s;"><title>30 contributions on 2025-12-22</title>
   <polygon class="right-1" points="624.22,162.0 636.35,165.75 636.35,181.25 624.22,177.5" fill="#072a19" stroke="#0d1117" stroke-width="0.5"/>
@@ -3298,9 +3303,9 @@
   <polygon class="top-1" points="527.23,177.0 539.35,173.25 527.23,169.5 515.1,173.25" fill="#0e4429" stroke="#0d1117" stroke-width="0.5"/>
 </g>
 <g class="bar-group" style="animation-delay: 0.630s, 2.680s;"><title>31 contributions on 2025-11-26</title>
-  <polygon class="right-2" points="551.48,167.0 563.6,170.75 563.6,188.75 551.48,185.0" fill="#004620" stroke="#0d1117" stroke-width="0.5"/>
-  <polygon class="front-2" points="539.35,170.75 551.48,167.0 551.48,185.0 539.35,188.75" fill="#005828" stroke="#0d1117" stroke-width="0.5"/>
-  <polygon class="top-2" points="551.48,174.5 563.6,170.75 551.48,167.0 539.35,170.75" fill="#006d32" stroke="#0d1117" stroke-width="0.5"/>
+  <polygon class="right-1" points="551.48,169.5 563.6,173.25 563.6,188.75 551.48,185.0" fill="#072a19" stroke="#0d1117" stroke-width="0.5"/>
+  <polygon class="front-1" points="539.35,173.25 551.48,169.5 551.48,185.0 539.35,188.75" fill="#0a3520" stroke="#0d1117" stroke-width="0.5"/>
+  <polygon class="top-1" points="551.48,177.0 563.6,173.25 551.48,169.5 539.35,173.25" fill="#0e4429" stroke="#0d1117" stroke-width="0.5"/>
 </g>
 <g class="bar-group" style="animation-delay: 0.630s, 2.680s;"><title>0 contributions on 2025-12-02</title>
   <polygon class="right-0" points="575.73,184.0 587.85,187.75 587.85,188.75 575.73,185.0" fill="#0d1117" stroke="#0d1117" stroke-width="0.5"/>
@@ -3413,9 +3418,9 @@
   <polygon class="top-1" points="539.35,188.75 551.48,185.0 539.35,181.25 527.23,185.0" fill="#0e4429" stroke="#0d1117" stroke-width="0.5"/>
 </g>
 <g class="bar-group" style="animation-delay: 0.585s, 2.560s;"><title>40 contributions on 2025-11-17</title>
-  <polygon class="right-2" points="563.6,178.25 575.73,182.0 575.73,200.0 563.6,196.25" fill="#004620" stroke="#0d1117" stroke-width="0.5"/>
-  <polygon class="front-2" points="551.48,182.0 563.6,178.25 563.6,196.25 551.48,200.0" fill="#005828" stroke="#0d1117" stroke-width="0.5"/>
-  <polygon class="top-2" points="563.6,185.75 575.73,182.0 563.6,178.25 551.48,182.0" fill="#006d32" stroke="#0d1117" stroke-width="0.5"/>
+  <polygon class="right-1" points="563.6,180.75 575.73,184.5 575.73,200.0 563.6,196.25" fill="#072a19" stroke="#0d1117" stroke-width="0.5"/>
+  <polygon class="front-1" points="551.48,184.5 563.6,180.75 563.6,196.25 551.48,200.0" fill="#0a3520" stroke="#0d1117" stroke-width="0.5"/>
+  <polygon class="top-1" points="563.6,188.25 575.73,184.5 563.6,180.75 551.48,184.5" fill="#0e4429" stroke="#0d1117" stroke-width="0.5"/>
 </g>
 <g class="bar-group" style="animation-delay: 0.585s, 2.560s;"><title>19 contributions on 2025-11-23</title>
   <polygon class="right-1" points="587.85,180.75 599.97,184.5 599.97,200.0 587.85,196.25" fill="#072a19" stroke="#0d1117" stroke-width="0.5"/>
@@ -3898,9 +3903,9 @@
   <polygon class="top-0" points="345.36,255.25 357.49,251.5 345.36,247.75 333.24,251.5" fill="#161b22" stroke="#0d1117" stroke-width="0.5"/>
 </g>
 <g class="bar-group" style="animation-delay: 0.375s, 2.000s;"><title>36 contributions on 2025-08-05</title>
-  <polygon class="right-2" points="369.61,230.75 381.74,234.5 381.74,252.5 369.61,248.75" fill="#004620" stroke="#0d1117" stroke-width="0.5"/>
-  <polygon class="front-2" points="357.49,234.5 369.61,230.75 369.61,248.75 357.49,252.5" fill="#005828" stroke="#0d1117" stroke-width="0.5"/>
-  <polygon class="top-2" points="369.61,238.25 381.74,234.5 369.61,230.75 357.49,234.5" fill="#006d32" stroke="#0d1117" stroke-width="0.5"/>
+  <polygon class="right-1" points="369.61,233.25 381.74,237.0 381.74,252.5 369.61,248.75" fill="#072a19" stroke="#0d1117" stroke-width="0.5"/>
+  <polygon class="front-1" points="357.49,237.0 369.61,233.25 369.61,248.75 357.49,252.5" fill="#0a3520" stroke="#0d1117" stroke-width="0.5"/>
+  <polygon class="top-1" points="369.61,240.75 381.74,237.0 369.61,233.25 357.49,237.0" fill="#0e4429" stroke="#0d1117" stroke-width="0.5"/>
 </g>
 <g class="bar-group" style="animation-delay: 0.375s, 2.000s;"><title>0 contributions on 2025-08-11</title>
   <polygon class="right-0" points="393.86,247.75 405.98,251.5 405.98,252.5 393.86,248.75" fill="#0d1117" stroke="#0d1117" stroke-width="0.5"/>
@@ -4685,17 +4690,17 @@
 <!-- Language Chart -->
 <g class="lang-chart">
 <circle cx="810" cy="255" r="42" fill="none" stroke="#161b22" stroke-width="14"/>
-<circle class="lang-seg" cx="810" cy="255" r="42" fill="none" stroke="#f34b7d" stroke-width="12" stroke-dasharray="112.26 151.63" stroke-dashoffset="0.00" style="animation-delay: 0.80s;"><title>C++ (42.5%)</title></circle>
-<circle class="lang-seg" cx="810" cy="255" r="42" fill="none" stroke="#3A4E3A" stroke-width="12" stroke-dasharray="56.26 207.63" stroke-dashoffset="-112.26" style="animation-delay: 0.95s;"><title>Cuda (21.3%)</title></circle>
-<circle class="lang-seg" cx="810" cy="255" r="42" fill="none" stroke="#3178c6" stroke-width="12" stroke-dasharray="48.02 215.87" stroke-dashoffset="-168.53" style="animation-delay: 1.10s;"><title>TypeScript (18.2%)</title></circle>
-<circle class="lang-seg" cx="810" cy="255" r="42" fill="none" stroke="#3572A5" stroke-width="12" stroke-dasharray="31.73 232.16" stroke-dashoffset="-216.55" style="animation-delay: 1.25s;"><title>Python (12.0%)</title></circle>
-<circle class="lang-seg" cx="810" cy="255" r="42" fill="none" stroke="#dea584" stroke-width="12" stroke-dasharray="4.60 259.29" stroke-dashoffset="-248.28" style="animation-delay: 1.40s;"><title>Rust (1.7%)</title></circle>
-<circle class="lang-seg" cx="810" cy="255" r="42" fill="none" stroke="#f1e05a" stroke-width="12" stroke-dasharray="4.05 259.85" stroke-dashoffset="-252.88" style="animation-delay: 1.55s;"><title>JavaScript (1.5%)</title></circle>
-<circle class="lang-seg" cx="810" cy="255" r="42" fill="none" stroke="#484f58" stroke-width="12" stroke-dasharray="6.96 256.93" stroke-dashoffset="-256.93" style="animation-delay: 1.70s;"><title>Other (2.6%)</title></circle>
+<circle class="lang-seg" cx="810" cy="255" r="42" fill="none" stroke="#f34b7d" stroke-width="12" stroke-dasharray="111.45 152.44" stroke-dashoffset="0.00" style="animation-delay: 0.80s;"><title>C++ (42.2%)</title></circle>
+<circle class="lang-seg" cx="810" cy="255" r="42" fill="none" stroke="#3A4E3A" stroke-width="12" stroke-dasharray="55.86 208.04" stroke-dashoffset="-111.45" style="animation-delay: 0.95s;"><title>Cuda (21.2%)</title></circle>
+<circle class="lang-seg" cx="810" cy="255" r="42" fill="none" stroke="#3178c6" stroke-width="12" stroke-dasharray="47.72 216.17" stroke-dashoffset="-167.31" style="animation-delay: 1.10s;"><title>TypeScript (18.1%)</title></circle>
+<circle class="lang-seg" cx="810" cy="255" r="42" fill="none" stroke="#3572A5" stroke-width="12" stroke-dasharray="31.50 232.39" stroke-dashoffset="-215.04" style="animation-delay: 1.25s;"><title>Python (11.9%)</title></circle>
+<circle class="lang-seg" cx="810" cy="255" r="42" fill="none" stroke="#dea584" stroke-width="12" stroke-dasharray="4.96 258.93" stroke-dashoffset="-246.54" style="animation-delay: 1.40s;"><title>Rust (1.9%)</title></circle>
+<circle class="lang-seg" cx="810" cy="255" r="42" fill="none" stroke="#f1e05a" stroke-width="12" stroke-dasharray="4.02 259.88" stroke-dashoffset="-251.50" style="animation-delay: 1.55s;"><title>JavaScript (1.5%)</title></circle>
+<circle class="lang-seg" cx="810" cy="255" r="42" fill="none" stroke="#484f58" stroke-width="12" stroke-dasharray="8.38 255.52" stroke-dashoffset="-255.52" style="animation-delay: 1.70s;"><title>Other (3.2%)</title></circle>
 <text x="810" y="252" text-anchor="middle" fill="#c9d1d9" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="600">Languages</text>
 <text x="810" y="265" text-anchor="middle" fill="#8b949e" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8">27 used</text>
 <rect x="766" y="314" width="6" height="6" rx="1" fill="#f34b7d"/>
-<text x="776" y="319" fill="#8b949e" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8">C++ 43%</text>
+<text x="776" y="319" fill="#8b949e" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8">C++ 42%</text>
 <rect x="766" y="327" width="6" height="6" rx="1" fill="#3A4E3A"/>
 <text x="776" y="332" fill="#8b949e" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8">Cuda 21%</text>
 <rect x="766" y="340" width="6" height="6" rx="1" fill="#3178c6"/>
