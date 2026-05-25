@@ -2822,7 +2822,7 @@
 </g>
 
 <!-- Title -->
-<text class="title" x="20" y="28">2,785 contributions in the last year</text>
+<text class="title" x="20" y="28">2,787 contributions in the last year</text>
 <text class="subtitle" x="20" y="46">@m96-chan</text>
 
 <text class="label" x="115.0" y="330.0" text-anchor="middle">May</text>
@@ -2931,6 +2931,11 @@
   <polygon class="right-1" points="709.09,133.25 721.22,137.0 721.22,147.5 709.09,143.75" fill="#072a19" stroke="#0d1117" stroke-width="0.5"/>
   <polygon class="front-1" points="696.97,137.0 709.09,133.25 709.09,143.75 696.97,147.5" fill="#0a3520" stroke="#0d1117" stroke-width="0.5"/>
   <polygon class="top-1" points="709.09,140.75 721.22,137.0 709.09,133.25 696.97,137.0" fill="#0e4429" stroke="#0d1117" stroke-width="0.5"/>
+</g>
+<g class="bar-group" style="animation-delay: 0.795s, 3.120s;"><title>2 contributions on 2026-05-25</title>
+  <polygon class="right-1" points="733.34,135.25 745.47,139.0 745.47,147.5 733.34,143.75" fill="#072a19" stroke="#0d1117" stroke-width="0.5"/>
+  <polygon class="front-1" points="721.22,139.0 733.34,135.25 733.34,143.75 721.22,147.5" fill="#0a3520" stroke="#0d1117" stroke-width="0.5"/>
+  <polygon class="top-1" points="733.34,142.75 745.47,139.0 733.34,135.25 721.22,139.0" fill="#0e4429" stroke="#0d1117" stroke-width="0.5"/>
 </g>
 <g class="bar-group" style="animation-delay: 0.780s, 3.080s;"><title>0 contributions on 2026-04-18</title>
   <polygon class="right-0" points="599.97,146.5 612.1,150.25 612.1,151.25 599.97,147.5" fill="#0d1117" stroke="#0d1117" stroke-width="0.5"/>
