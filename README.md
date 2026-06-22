@@ -62,10 +62,12 @@ I specialize in low-level system programming, cross-platform audio capture, shad
 | Project | Description |
 |---------|-------------|
 | **[0xBitNet](https://github.com/m96-chan/0xBitNet)** | Run BitNet b1.58 ternary LLMs with WebGPU — in browsers and native apps. |
+| **[ProcTap](https://github.com/m96-chan/ProcTap)** | Per-process audio capture via WASAPI process loopback (Windows; Linux/macOS planned). Low-latency PID taps for Python. |
+| **[OBS-WebRTC-Link](https://github.com/m96-chan/OBS-WebRTC-Link)** | Versatile WebRTC plugin for OBS Studio — universal low-latency WebRTC input & output. |
+| **[ai_research_dashboard](https://github.com/m96-chan/ai_research_dashboard)** | Latest AI/ML papers, models, repos, trends & news — auto-updated every hour. |
+| **[NxPU](https://github.com/m96-chan/NxPU)** | WGSL &rarr; NPU transpiler. Compiles WebGPU shading language to CoreML, ONNX, TFLite, and StableHLO. |
+| **[PyETWkit](https://github.com/m96-chan/PyETWkit)** | High-performance ETW (Event Tracing for Windows) consumer library for Python with a Rust core. |
 | **[PyGPUkit](https://github.com/m96-chan/PyGPUkit)** | Minimal GPU runtime for Python — high-performance CUDA kernels, memory management, and LLM inference without heavy dependencies. |
-| **[ProcessAudioTap](https://github.com/m96-chan/ProcTap)** | Cross-platform per-process audio capture (Win/macOS/Linux). Low-latency taps, real-time filters, plugin architecture. |
-| **AudioLink Shader Suite** | Custom VRChat shaders reacting to audio spectra. Used in club events, DJ worlds, and visual installations. |
-| **LLM Automation Pipeline** | Whisper &rarr; LLM &rarr; Slack/Discord. Diarization, summarization, topic detection, automated posting. |
-| **VRChat Automation Tools** | Avatar detection, join-log analysis, OSC automation, and AudioLink-reactive effects. |
+| **[KTApple](https://github.com/m96-chan/KTApple)** | KDE-style KWin tiling for macOS — visual tile editor, Shift+Drop placement, gap-drag resize. No SIP required. |
 
 ---
