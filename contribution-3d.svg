@@ -2822,7 +2822,7 @@
 </g>
 
 <!-- Title -->
-<text class="title" x="20" y="28">4,325 contributions in the last year</text>
+<text class="title" x="20" y="28">4,386 contributions in the last year</text>
 <text class="subtitle" x="20" y="46">@m96-chan</text>
 
 <text class="label" x="115.0" y="330.0" text-anchor="middle">Jul</text>
@@ -2887,6 +2887,11 @@
   <polygon class="front-1" points="672.72,131.0 684.84,127.25 684.84,136.25 672.72,140.0" fill="#0a3520" stroke="#0d1117" stroke-width="0.5"/>
   <polygon class="top-1" points="684.84,134.75 696.97,131.0 684.84,127.25 672.72,131.0" fill="#0e4429" stroke="#0d1117" stroke-width="0.5"/>
 </g>
+<g class="bar-group" style="animation-delay: 0.825s, 3.200s;"><title>19 contributions on 2026-07-29</title>
+  <polygon class="right-1" points="709.09,120.75 721.22,124.5 721.22,140.0 709.09,136.25" fill="#072a19" stroke="#0d1117" stroke-width="0.5"/>
+  <polygon class="front-1" points="696.97,124.5 709.09,120.75 709.09,136.25 696.97,140.0" fill="#0a3520" stroke="#0d1117" stroke-width="0.5"/>
+  <polygon class="top-1" points="709.09,128.25 721.22,124.5 709.09,120.75 696.97,124.5" fill="#0e4429" stroke="#0d1117" stroke-width="0.5"/>
+</g>
 <g class="bar-group" style="animation-delay: 0.810s, 3.160s;"><title>72 contributions on 2026-07-04</title>
   <polygon class="right-2" points="624.22,122.0 636.35,125.75 636.35,143.75 624.22,140.0" fill="#004620" stroke="#0d1117" stroke-width="0.5"/>
   <polygon class="front-2" points="612.1,125.75 624.22,122.0 624.22,140.0 612.1,143.75" fill="#005828" stroke="#0d1117" stroke-width="0.5"/>
@@ -2907,10 +2912,10 @@
   <polygon class="front-1" points="684.84,130.25 696.97,126.5 696.97,140.0 684.84,143.75" fill="#0a3520" stroke="#0d1117" stroke-width="0.5"/>
   <polygon class="top-1" points="696.97,134.0 709.09,130.25 696.97,126.5 684.84,130.25" fill="#0e4429" stroke="#0d1117" stroke-width="0.5"/>
 </g>
-<g class="bar-group" style="animation-delay: 0.810s, 3.160s;"><title>5 contributions on 2026-07-28</title>
-  <polygon class="right-1" points="721.22,130.0 733.34,133.75 733.34,143.75 721.22,140.0" fill="#072a19" stroke="#0d1117" stroke-width="0.5"/>
-  <polygon class="front-1" points="709.09,133.75 721.22,130.0 721.22,140.0 709.09,143.75" fill="#0a3520" stroke="#0d1117" stroke-width="0.5"/>
-  <polygon class="top-1" points="721.22,137.5 733.34,133.75 721.22,130.0 709.09,133.75" fill="#0e4429" stroke="#0d1117" stroke-width="0.5"/>
+<g class="bar-group" style="animation-delay: 0.810s, 3.160s;"><title>47 contributions on 2026-07-28</title>
+  <polygon class="right-2" points="721.22,122.0 733.34,125.75 733.34,143.75 721.22,140.0" fill="#004620" stroke="#0d1117" stroke-width="0.5"/>
+  <polygon class="front-2" points="709.09,125.75 721.22,122.0 721.22,140.0 709.09,143.75" fill="#005828" stroke="#0d1117" stroke-width="0.5"/>
+  <polygon class="top-2" points="721.22,129.5 733.34,125.75 721.22,122.0 709.09,125.75" fill="#006d32" stroke="#0d1117" stroke-width="0.5"/>
 </g>
 <g class="bar-group" style="animation-delay: 0.795s, 3.120s;"><title>56 contributions on 2026-06-27</title>
   <polygon class="right-2" points="612.1,125.75 624.22,129.5 624.22,147.5 612.1,143.75" fill="#004620" stroke="#0d1117" stroke-width="0.5"/>
@@ -4695,13 +4700,13 @@
 <!-- Language Chart -->
 <g class="lang-chart">
 <circle cx="810" cy="255" r="42" fill="none" stroke="#161b22" stroke-width="14"/>
-<circle class="lang-seg" cx="810" cy="255" r="42" fill="none" stroke="#f34b7d" stroke-width="12" stroke-dasharray="122.41 141.49" stroke-dashoffset="0.00" style="animation-delay: 0.80s;"><title>C++ (46.4%)</title></circle>
-<circle class="lang-seg" cx="810" cy="255" r="42" fill="none" stroke="#3178c6" stroke-width="12" stroke-dasharray="58.21 205.69" stroke-dashoffset="-122.41" style="animation-delay: 0.95s;"><title>TypeScript (22.1%)</title></circle>
-<circle class="lang-seg" cx="810" cy="255" r="42" fill="none" stroke="#3A4E3A" stroke-width="12" stroke-dasharray="21.43 242.47" stroke-dashoffset="-180.61" style="animation-delay: 1.10s;"><title>Cuda (8.1%)</title></circle>
-<circle class="lang-seg" cx="810" cy="255" r="42" fill="none" stroke="#dea584" stroke-width="12" stroke-dasharray="18.90 244.99" stroke-dashoffset="-202.04" style="animation-delay: 1.25s;"><title>Rust (7.2%)</title></circle>
-<circle class="lang-seg" cx="810" cy="255" r="42" fill="none" stroke="#3572A5" stroke-width="12" stroke-dasharray="12.39 251.50" stroke-dashoffset="-220.94" style="animation-delay: 1.40s;"><title>Python (4.7%)</title></circle>
-<circle class="lang-seg" cx="810" cy="255" r="42" fill="none" stroke="#555555" stroke-width="12" stroke-dasharray="7.68 256.21" stroke-dashoffset="-233.33" style="animation-delay: 1.55s;"><title>C (2.9%)</title></circle>
-<circle class="lang-seg" cx="810" cy="255" r="42" fill="none" stroke="#484f58" stroke-width="12" stroke-dasharray="22.87 241.02" stroke-dashoffset="-241.02" style="animation-delay: 1.70s;"><title>Other (8.7%)</title></circle>
+<circle class="lang-seg" cx="810" cy="255" r="42" fill="none" stroke="#f34b7d" stroke-width="12" stroke-dasharray="122.34 141.55" stroke-dashoffset="0.00" style="animation-delay: 0.80s;"><title>C++ (46.4%)</title></circle>
+<circle class="lang-seg" cx="810" cy="255" r="42" fill="none" stroke="#3178c6" stroke-width="12" stroke-dasharray="58.17 205.72" stroke-dashoffset="-122.34" style="animation-delay: 0.95s;"><title>TypeScript (22.0%)</title></circle>
+<circle class="lang-seg" cx="810" cy="255" r="42" fill="none" stroke="#3A4E3A" stroke-width="12" stroke-dasharray="21.41 242.48" stroke-dashoffset="-180.51" style="animation-delay: 1.10s;"><title>Cuda (8.1%)</title></circle>
+<circle class="lang-seg" cx="810" cy="255" r="42" fill="none" stroke="#dea584" stroke-width="12" stroke-dasharray="18.87 245.02" stroke-dashoffset="-201.93" style="animation-delay: 1.25s;"><title>Rust (7.2%)</title></circle>
+<circle class="lang-seg" cx="810" cy="255" r="42" fill="none" stroke="#3572A5" stroke-width="12" stroke-dasharray="12.38 251.52" stroke-dashoffset="-220.80" style="animation-delay: 1.40s;"><title>Python (4.7%)</title></circle>
+<circle class="lang-seg" cx="810" cy="255" r="42" fill="none" stroke="#555555" stroke-width="12" stroke-dasharray="7.68 256.21" stroke-dashoffset="-233.18" style="animation-delay: 1.55s;"><title>C (2.9%)</title></circle>
+<circle class="lang-seg" cx="810" cy="255" r="42" fill="none" stroke="#484f58" stroke-width="12" stroke-dasharray="23.04 240.86" stroke-dashoffset="-240.86" style="animation-delay: 1.70s;"><title>Other (8.7%)</title></circle>
 <text x="810" y="252" text-anchor="middle" fill="#c9d1d9" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="600">Languages</text>
 <text x="810" y="265" text-anchor="middle" fill="#8b949e" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8">36 used</text>
 <rect x="766" y="314" width="6" height="6" rx="1" fill="#f34b7d"/>
