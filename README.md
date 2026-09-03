@@ -5,8 +5,8 @@
 <h3 align="center">Full-Stack (L1-L7) Engineer & R&D Specialist</h3>
 
 <p align="center">
-  <a href="https://x.com/djsaxia"><img src="https://img.shields.io/badge/X-@djsaxia-000?style=flat-square&logo=x" alt="X"></a>
-  <a href="https://vrchat.com/home/user/usr_a94dcf41-3435-473e-bac8-1a2abbd1b3bd"><img src="https://img.shields.io/badge/VRChat-m96--chan-1DB954?style=flat-square&logo=vrchat&logoColor=white" alt="VRChat"></a>
+  <a href="https://x.com/m96_chan_dev"><img src="https://img.shields.io/badge/X-@m96__chan__dev-000?style=flat-square&logo=x" alt="X"></a>
+  <a href="https://vrchat.com/home/user/usr_8c039efe-be52-40c5-8777-d7aff0c86aae"><img src="https://img.shields.io/badge/VRChat-m96--chan-1DB954?style=flat-square&logo=vrchat&logoColor=white" alt="VRChat"></a>
   <a href="https://www.linkedin.com/in/yusuke-harada-797698276/"><img src="https://img.shields.io/badge/LinkedIn-Yusuke_Harada-0A66C2?style=flat-square&logo=linkedin" alt="LinkedIn"></a>
 </p>
 
